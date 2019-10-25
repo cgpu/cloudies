@@ -50,4 +50,7 @@ cd ${GOPATH}/src/github.com/sylabs/singularity && \
 # Now go home and start 
 cd ~ && \
 sudo apt install -y python-pip  && \
-sudo apt -y install awscli
+sudo apt -y install awscli && \
+sudo apt install jq  -y && \
+sudo apt install --reinstall zlibc zlib1g zlib1g-dev -y && \
+sudo apt install seqtk -y
