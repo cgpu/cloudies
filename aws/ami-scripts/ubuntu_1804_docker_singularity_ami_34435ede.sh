@@ -53,4 +53,6 @@ sudo apt install -y python-pip  && \
 sudo apt -y install awscli && \
 sudo apt install jq  -y && \
 sudo apt install --reinstall zlibc zlib1g zlib1g-dev -y && \
-sudo apt install seqtk -y
+sudo apt install seqtk -y   && \
+sudo usermod -aG docker $USER  && \
+sudo groupadd docker
