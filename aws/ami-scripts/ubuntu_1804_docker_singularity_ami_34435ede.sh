@@ -46,6 +46,7 @@ cd ${GOPATH}/src/github.com/sylabs/singularity && \
   cd ./builddir && \
   make && \
   sudo make install  && \
+  sudo mv go/ /usr/bin/  && \
 
 # Now go home and start 
 cd ~ && \
@@ -54,5 +55,7 @@ sudo apt -y install awscli && \
 sudo apt install jq  -y && \
 sudo apt install --reinstall zlibc zlib1g zlib1g-dev -y && \
 sudo apt install seqtk -y   && \
+USER=`whoami` && \
+sudo groupadd docker && \
 sudo usermod -aG docker $USER  && \
-sudo groupadd docker
+newgrp docker
