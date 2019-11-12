@@ -46,7 +46,6 @@ cd ${GOPATH}/src/github.com/sylabs/singularity && \
   cd ./builddir && \
   make && \
   sudo make install  && \
-  sudo mv go/ /usr/bin/  && \
 
 # Now go home and start 
 cd ~ && \
